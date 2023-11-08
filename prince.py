@@ -29,7 +29,22 @@ class Run:
 class Jump:
     @staticmethod
     def enter(prince,e):
-        if
+        if space_down(e):
+            prince.dir,prince.action=1,1
+
+    @staticmethod
+    def exit(prince, e):
+        pass
+
+    @staticmethod
+    def do(prince):
+        prince.frame=(prince.frame+1)%10
+        prince.x+=prince.dir*5
+        pass
+
+    @staticmethod
+    def draw(prince, e):
+        prince.image.clip_draw(prince.frame*100,prince.action*100,100,100,prince.x,prince.y)
 
 class Skill:
     pass
