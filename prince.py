@@ -10,7 +10,7 @@ def space_down(e):
 class Run:
     @staticmethod
     def enter(prince):
-        prince.dir, prince.action=1
+        prince.action=0
     @staticmethod
     def exit(prince,e):
         pass
@@ -86,7 +86,7 @@ class Prince:
         self.x, self.y = 400, 90
         self.frame = 0
         self.action = 0
-        self.image = load_image('prince_run_animation.png')
+        self.image = load_image('prince_ani.png')
         self.state_machine = StateMachine(self)
         self.state_machine.start()
 
